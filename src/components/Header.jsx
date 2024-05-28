@@ -4,9 +4,7 @@ export const Header = ({ entriesLength, columns }) => {
     <thead>
       <tr>
         {entriesLength === 0 ? (
-          <tr>
             <td>No results found</td>
-          </tr>
         ) : (
           columns.map((col) => (
             <th key={col.name} className="products-table-head">

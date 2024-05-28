@@ -4,7 +4,9 @@ export const Content = ({ entries, columns}) => {
   return (
     <tbody>
       {entries.length === 0
-        ? ""
+        ? <tr> 
+            <td> - </td>
+          </tr>
         : entries.map((entry) => (
             <tr key={entry.isin}>
               {columns.map((col) => (
