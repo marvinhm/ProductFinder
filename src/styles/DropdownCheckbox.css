@@ -37,6 +37,8 @@
   width: 100%;
   cursor: pointer;
   margin-bottom: 4px;
+  text-align: left;
+  padding-left: 47px;
 }
 
 .dropdown-item input {
