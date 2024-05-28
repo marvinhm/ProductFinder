@@ -10,6 +10,10 @@ Run `json-server --watch db.json --port 3004` to start json-server to load our p
 ## Running Application
 
 Run `npm run dev` to run the application
+
+## Running end-to-end tests
+
+Run `npm run cypress:open` to execute the end-to-end tests via [Cypress](https://www.cypress.io/).
  
 
 Currently, two official plugins are available:
