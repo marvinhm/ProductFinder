@@ -180,7 +180,7 @@ const ProductsTable = () => {
         selectedOptions={selectedOptions}
       />
 
-      <button className="filterBtn" onClick={applyFilters}>Apply Filters</button>
+      <button className="filterBtn" onClick={applyFilters} data-cy="apply-filter">Apply Filters</button>
       <button className="refreshBtn" onClick={() => setFilteredProducts(products)}>Refresh Results</button>
 
       <table className="products-table">

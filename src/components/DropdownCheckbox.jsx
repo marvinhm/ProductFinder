@@ -14,7 +14,7 @@ export const DropdownCheckbox = ({ catergory, handleCheckboxChange, selectedOpti
 
     return (
         <div className="dropdown-container">
-            <button onClick={toggleDropdown} className="dropdown-button">
+            <button onClick={toggleDropdown} className="dropdown-button" data-cy="dropdown-btn">
                 {catergory.value}
                 <i className={`arrow ${isOpen ? 'down' : 'up'}`}></i>
             </button>
@@ -31,6 +31,7 @@ export const DropdownCheckbox = ({ catergory, handleCheckboxChange, selectedOpti
                                         type="checkbox"
                                         checked={selectedOptions.includes(val.name)}
                                         onChange={(e) => onChangeHandler(e, val.name, val.value, catergory.name)}
+                                        data-cy="dropdown-input"
                                     />
                                     <span className="checkmark"></span>
                                     {val.name}

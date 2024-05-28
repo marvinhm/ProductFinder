@@ -15,7 +15,7 @@ export const SearchBar = ({ query, data, handler }) => {
           <p>SEARCH</p>
         </div>
         <input type="text" className="searchTerm" placeholder="Enter fund name" value={query}
-        onChange={(e) => handler(e, data)}/>
+        onChange={(e) => handler(e, data)} data-cy="search-input"/>
       </div>
     </div>
   );
