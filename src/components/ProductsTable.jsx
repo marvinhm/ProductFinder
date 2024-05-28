@@ -24,38 +24,84 @@ const ProductsTable = () => {
 
   const catergories = {
     stategey: {
-      name: 'Strategy', 
-      value: 'Strategy', 
+      name: "Strategy",
+      value: "Strategy",
       options: [
-        {type: '', values: [{name: 'Thematic', value: 'Thematic'}, {name: 'Factors', value: 'Factors'}, {name: 'Equity Income', value: 'Equity Income'}, {name: 'Capitial Strength', value: 'Capitial Strength'}, {name: 'Currency Hedge', value: 'Currency Hedge'}, {name: 'ESG', value: 'ESG'}]},
-      ]
+        {
+          type: "",
+          values: [
+            { name: "Thematic", value: "Thematic" },
+            { name: "Factors", value: "Factors" },
+            { name: "Equity Income", value: "Equity Income" },
+            { name: "Capitial Strength", value: "Capitial Strength" },
+            { name: "Currency Hedge", value: "Currency Hedge" },
+            { name: "ESG", value: "ESG" },
+          ],
+        },
+      ],
     },
     region: {
-      name: 'Region',
-      value: 'Region',
+      name: "Region",
+      value: "Region",
       options: [
-        {type: 'Markets', values: [{name: 'Developed', value: 'Developed'}, {name: 'Emerging', value: 'Emerging'}]},
-        {type: 'Region', values: [{name: 'Asia Pacific', value: 'Asia Pacific'}, {name: 'Europe', value: 'Europe'}, {name: 'Eurozone', value: 'Eurozone'}, {name: 'Germany', value: 'Germany'}, {name: 'Switzerland', value: 'Switzerland'}, {name: 'United Kingdom', value: 'United Kingdom'}, {name: 'Global', value: 'Global'}, {name: 'North America', value: 'North America'}, {name: 'United States', value:
-        'United States'
-        }]},
-      ]
+        {
+          type: "Markets",
+          values: [
+            { name: "Developed", value: "Developed" },
+            { name: "Emerging", value: "Emerging" },
+          ],
+        },
+        {
+          type: "Region",
+          values: [
+            { name: "Asia Pacific", value: "Asia Pacific" },
+            { name: "Europe", value: "Europe" },
+            { name: "Eurozone", value: "Eurozone" },
+            { name: "Germany", value: "Germany" },
+            { name: "Switzerland", value: "Switzerland" },
+            { name: "United Kingdom", value: "United Kingdom" },
+            { name: "Global", value: "Global" },
+            { name: "North America", value: "North America" },
+            { name: "United States", value: "United States" },
+          ],
+        },
+      ],
     },
     asset_class: {
-      name: 'Asset_Class', 
-      value: 'Asset Class',
+      name: "Asset_Class",
+      value: "Asset Class",
       options: [
-        {type: 'Equity', values: [{name: 'All Cap', value: 'Equity'}, {name: 'Large Cap', value: 'Equity'}, {name: 'Small Cap', value: 'Equity'}]},
-        {type: 'Fixed Income', values: [{name: 'Goverment', value: 'Fixed Income'}, {name: 'Currency', value: 'Fixed Income'}]},
-      ]
+        {
+          type: "Equity",
+          values: [
+            { name: "All Cap", value: "Equity" },
+            { name: "Large Cap", value: "Equity" },
+            { name: "Small Cap", value: "Equity" },
+          ],
+        },
+        {
+          type: "Fixed Income",
+          values: [
+            { name: "Goverment", value: "Fixed Income" },
+            { name: "Currency", value: "Fixed Income" },
+          ],
+        },
+      ],
     },
     style: {
-      name: 'Style', 
-      value: 'Style',
+      name: "Style",
+      value: "Style",
       options: [
-        {type: '', values: [{name: 'Active', value: 'Active'}, {name: 'Index', value: 'Index'}]},
-      ]
-    }
-  }
+        {
+          type: "",
+          values: [
+            { name: "Active", value: "Active" },
+            { name: "Index", value: "Index" },
+          ],
+        },
+      ],
+    },
+  };
 
   const handleSearch = (e, data) => {
     e.preventDefault();
@@ -72,20 +118,20 @@ const ProductsTable = () => {
     }
   };
 
-    const [regionFilter, setRegionFilter] = useState([]);
-    const [strategyFilter, setStrategyFilter] = useState([]);
-    const [assetFilter, setAssetFilter] = useState([]);
-    const [styleFilter, setStyleFilter] = useState([]);
+  const [regionFilter, setRegionFilter] = useState([]);
+  const [strategyFilter, setStrategyFilter] = useState([]);
+  const [assetFilter, setAssetFilter] = useState([]);
+  const [styleFilter, setStyleFilter] = useState([]);
 
-    const filtration = (data, regionFilter, strategyFilter, assetFilter, styleFilter) => {
-      return data.filter(item => {
-          const regionMatch = !regionFilter.length || regionFilter.includes(item.region);
-          const strategyMatch = !strategyFilter.length || strategyFilter.includes(item.strategy);
-          const assetMatch = !assetFilter.length || assetFilter.includes(item.asset_class);
-          const styleMatch = !styleFilter.length || styleFilter.includes(item.style);
-          
-          return regionMatch && strategyMatch && assetMatch && styleMatch;
-      });
+  const filtration = (data, regionFilter, strategyFilter, assetFilter, styleFilter) => {
+    return data.filter(item => {
+      const regionMatch = !regionFilter.length || regionFilter.includes(item.region);
+      const strategyMatch = !strategyFilter.length || strategyFilter.includes(item.strategy);
+      const assetMatch = !assetFilter.length || assetFilter.includes(item.asset_class);
+      const styleMatch = !styleFilter.length || styleFilter.includes(item.style);
+      
+      return regionMatch && strategyMatch && assetMatch && styleMatch;
+    });
   };
 
   const applyFilters = () => {
@@ -100,11 +146,11 @@ const ProductsTable = () => {
     const { checked } = e.target;
 
     if(catergory === 'Region') {
-        if (checked) {
-          setRegionFilter([...regionFilter, optionName]);
-        } else {
-          setRegionFilter(regionFilter.filter(item => item !== optionName));
-        }
+      if (checked) {
+        setRegionFilter([...regionFilter, optionName]);
+      } else {
+        setRegionFilter(regionFilter.filter(item => item !== optionName));
+      }
     }
     
     if(catergory === 'Strategy') {
@@ -113,22 +159,22 @@ const ProductsTable = () => {
       } else {
         setStrategyFilter(strategyFilter.filter(item => item !== optionName));
       }
-  } 
-  if(catergory === 'Asset_Class') {
-    if (checked) {
-      setAssetFilter([...assetFilter, optionName]);
-    } else {
-      setAssetFilter(assetFilter.filter(item => item !== optionName));
+    } 
+    if(catergory === 'Asset_Class') {
+      if (checked) {
+        setAssetFilter([...assetFilter, optionName]);
+      } else {
+        setAssetFilter(assetFilter.filter(item => item !== optionName));
+      }
+    } 
+    
+    if(catergory === 'Style') {
+      if (checked) {
+        setStyleFilter([...styleFilter, optionName]);
+      } else {
+        setStyleFilter(styleFilter.filter(item => item !== optionName));
+      }
     }
-  } 
-  
-  if(catergory === 'Style') {
-    if (checked) {
-      setStyleFilter([...styleFilter, optionName]);
-    } else {
-      setStyleFilter(styleFilter.filter(item => item !== optionName));
-    }
-  }
 
     setSelectedOptions(prevSelectedOptions =>
         prevSelectedOptions.includes(optionName)
