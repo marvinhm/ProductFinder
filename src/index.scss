@@ -29,7 +29,6 @@ body{
 }
 
 .searchTerm {
-  width: 100%;
   border: none;
   background: none;
   border-bottom: 3px solid #0E2F53;
@@ -38,6 +37,7 @@ body{
   height: 41px;
   outline: none;
   color: #9DBFAF;
+  width: 59%;
 }
 
 .searchTerm:focus{

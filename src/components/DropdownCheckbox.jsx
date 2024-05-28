@@ -2,14 +2,13 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import '../styles/DropdownCheckbox.css';
 
-export const DropdownCheckbox = ({ catergory, options, setCurrentWidget, handleCheckboxChange, selectedOptions }) => {
+export const DropdownCheckbox = ({ catergory, handleCheckboxChange, selectedOptions }) => {
     const [isOpen, setIsOpen] = useState(false);
 
 
-    const handler = (e, option) => {
+    const onChangeHandler = (e, optionName, optionValue, catergoryName) => {
 
-        setCurrentWidget(catergory.name);
-        handleCheckboxChange(e, option, catergory.name); 
+        handleCheckboxChange(e, optionName, catergoryName); 
     }
     const toggleDropdown = () => setIsOpen(!isOpen);
 
@@ -21,7 +20,7 @@ export const DropdownCheckbox = ({ catergory, options, setCurrentWidget, handleC
             </button>
             {isOpen && (
                 <div className="dropdown-menu">
-                    {options.map((option, index) => (
+                    {catergory.options.map((option, index) => (
                         <div key={index} className="dropdown-item">
                         <label className="dropdown-label">{option.type}</label>
 
@@ -30,11 +29,11 @@ export const DropdownCheckbox = ({ catergory, options, setCurrentWidget, handleC
                                     <input
                                         className='checkbox'
                                         type="checkbox"
-                                        checked={selectedOptions.includes(val)}
-                                        onChange={(e) => handler(e, val, catergory.name)}
+                                        checked={selectedOptions.includes(val.name)}
+                                        onChange={(e) => onChangeHandler(e, val.name, val.value, catergory.name)}
                                     />
                                     <span className="checkmark"></span>
-                                    {val}
+                                    {val.name}
                                 </label>
                             ))}
                         </div>

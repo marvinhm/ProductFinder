@@ -7,7 +7,7 @@
       "share_class_currency": "EUR",
       "isin": "IE00BF16M727",
       "strategy": "Thematic",
-      "asset_class": "Equity",
+      "asset_class": "All Cap",
       "region": "Global",
       "style": "Active"
     },
@@ -18,7 +18,7 @@
       "share_class_currency": "EUR",
       "isin": "IE00BFD2H405",
       "strategy": "Thematic",
-      "asset_class": "Nan",
+      "asset_class": "Small Cap",
       "region": "Global",
       "style": "Active"
     },
@@ -29,7 +29,7 @@
       "share_class_currency": "EUR",
       "isin": "IE00BDBRT036",
       "strategy": "Thematic",
-      "asset_class": "Equity",
+      "asset_class": "Currency",
       "region": "Global",
       "style": "Active"
     },
@@ -40,7 +40,7 @@
       "share_class_currency": "EUR",
       "isin": "IE00BF5DXP42",
       "strategy": "Thematic",
-      "asset_class": "Equity",
+      "asset_class": "Goverment",
       "region": "Global",
       "style": "Active"
     },
@@ -51,7 +51,7 @@
       "share_class_currency": "EUR",
       "isin": "IE00BG0SSC32",
       "strategy": "Thematic",
-      "asset_class": "Equity",
+      "asset_class": "Goverment",
       "region": "United States",
       "style": "Active"
     },
@@ -62,7 +62,7 @@
       "share_class_currency": "EUR",
       "isin": "IE00BT9PVG14",
       "strategy": "Thematic",
-      "asset_class": "Equity",
+      "asset_class": "Goverment",
       "region": "Global",
       "style": "Active"
     },
@@ -73,7 +73,7 @@
       "share_class_currency": "USD",
       "isin": "IE00BL0L0H60",
       "strategy": "Thematic",
-      "asset_class": "Equity",
+      "asset_class": "Small Cap",
       "region": "Developed",
       "style": "Active"
     },
@@ -84,7 +84,7 @@
       "share_class_currency": "EUR",
       "isin": "IE00BFD26097",
       "strategy": "Thematic",
-      "asset_class": "Equity",
+      "asset_class": "Large Cap",
       "region": "Europe",
       "style": "Active"
     },{
@@ -94,7 +94,7 @@
       "share_class_currency": "USD",
       "isin": "IE00BYTH6238",
       "strategy": "Thematic",
-      "asset_class": "Equity",
+      "asset_class": "Goverment",
       "region": "United States",
       "style": "Active"
     },
@@ -105,7 +105,7 @@
       "share_class_currency": "EUR",
       "isin": "IE00BD5HBS12",
       "strategy": "Fixed Income",
-      "asset_class": "Fixed Income",
+      "asset_class": "Currency",
       "region": "Global",
       "style": "Index"
     },
@@ -116,7 +116,7 @@
       "share_class_currency": "EUR",
       "isin": "IE00BKS2X317",
       "strategy": "Fixed Income",
-      "asset_class": "Fixed Income",
+      "asset_class": "Currency",
       "region": "Global",
       "style": "Index"
     }

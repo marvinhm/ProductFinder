@@ -8,15 +8,14 @@
 .products-table {
   table-layout: fixed;
   border-collapse: collapse;
-  border: 0;
   color: white;
   font-size: 13px;
   font-weight: 200;
   border-style: none;
   outline: none;
-  padding:none; 
   border: 0px;
   margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 .products-table-cell {
