@@ -16,7 +16,7 @@ export const DropdownCheckbox = ({ catergory, handleCheckboxChange, selectedOpti
         <div className="dropdown-container">
             <button onClick={toggleDropdown} className="dropdown-button" data-cy="dropdown-btn">
                 {catergory.value}
-                <i className={`arrow ${isOpen ? 'down' : 'up'}`}></i>
+                <i className={`arrow ${isOpen ? 'up' : 'down'}`}></i>
             </button>
             {isOpen && (
                 <div className="dropdown-menu">
