@@ -144,6 +144,9 @@ const ProductsTable = () => {
       .then((products) => {
         setProducts(products);
         setFilteredProducts(products);
+      })
+      .catch((error) => {
+        console.log("Fetch not working correctly", error)
       });
       
   }, []);
