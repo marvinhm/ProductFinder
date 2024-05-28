@@ -13,7 +13,7 @@ Run `npm run dev` to run the application
 
 ## Running end-to-end tests
 
-Run `npm run cypress:open` to execute the end-to-end tests via [Cypress](https://www.cypress.io/).
+Run `npx cypress open` to execute the end-to-end tests via [Cypress](https://www.cypress.io/).
  
 
 Currently, two official plugins are available:
