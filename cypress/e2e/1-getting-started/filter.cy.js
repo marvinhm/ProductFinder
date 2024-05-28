@@ -3,7 +3,7 @@ describe('Product Finder - Filter', () => {
     cy.visit('http://localhost:5173/');
   });
   
-  it('Should search by fund name', ()=>{
+  it('Should filter style by index', ()=>{
     cy.get('[data-cy=dropdown-btn]').last().click();
     cy.get('[data-cy=dropdown-input]').last().click();
     cy.get('[data-cy=apply-filter]').click();
