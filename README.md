@@ -1,6 +1,16 @@
-# React + Vite
+# Product Finder Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Product finder application for fund management use. The app is a data table with a few select widgets and a search input. Selecting an option or
+multiple options from the widget and hitting the 'apply filter' button filters the table data accordingly. This project was generated with a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+## Running Json server
+
+Run `json-server --watch db.json --port 3004` to start json-server to load our product data. Navigate to `http://localhost:3004/` to view the data source.
+
+## Running Application
+
+Run `npm run dev` to run the application
+ 
 
 Currently, two official plugins are available:
 
