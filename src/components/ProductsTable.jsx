@@ -138,7 +138,7 @@ const ProductsTable = () => {
     if (selectedOptions.length === 0) {
       setFilteredProducts(products);
     } else {
-      setFilteredProducts(filtration(filteredProducts, regionFilter, strategyFilter, assetFilter, styleFilter));
+      setFilteredProducts(filtration(products, regionFilter, strategyFilter, assetFilter, styleFilter));
     }
   };
 
